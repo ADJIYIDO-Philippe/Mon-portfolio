@@ -1,0 +1,344 @@
+/* ================= VARIABLES ================= */
+:root {
+    --primary: #11dfe6;
+    --dark: #0F172A;
+    --text: #334155;
+    --light: #f5f7fa;
+    --card: #ffffff;
+    --border: #e2e8f0;
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, Arial, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: var(--dark);
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+/* ================= TITRES ================= */
+h1 {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* ================= HERO ================= */
+#hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: linear-gradient(180deg, #fff, #eef2f7);
+}
+
+.hero-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+#hero img {
+    width: 400px;
+    height: 420px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+    margin-bottom: 20px;
+}
+
+/* ================= BUTTON ================= */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--dark);
+    transform: translateY(-2px);
+}
+
+/* ================= SOCIAL ================= */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    background: var(--primary);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 70px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ================= ABOUT ================= */
+.about-container {
+    display: flex;
+    flex-direction: row;      /* FORCE la ligne */
+    align-items: flex-start;  /* IMPORTANT (pas center) */
+    gap: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+.about-container img {
+    width: 280px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0; /* 🔥 empêche l’image de se réduire */
+}
+
+/* TEXTE */
+.about-text {
+    flex: 1;        /* 🔥 prend tout l’espace restant */
+    min-width: 300px; /* 🔥 empêche passage en dessous */
+}
+
+/* LISTE */
+.about-text ul {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+.about-text ul li {
+    margin-bottom: 6px;
+}
+
+/* ================= SKILLS ================= */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 10px;
+    background: var(--primary);
+    border-radius: 20px;
+}
+
+/* ================= PROJECTS ================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.projects-grid article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projects-grid article p {
+    padding: 0 15px;
+}
+
+.projects-grid article h3 {
+    padding: 15px 15px 5px;
+}
+
+.projects-grid .btn {
+    margin: 15px;
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 14px;
+    width: fit-content;
+    align-self: center;
+}
+
+/* ================= FORMATION ================= */
+.formation-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.formation-card {
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.formation-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* ================= CONTACT ================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--dark);
+    color: white;
+    margin-top: 30px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .formation-container {
+        grid-template-columns: 1fr;
+    }
+
+    #hero img {
+        width: 140px;
+        height: 140px;
+    }
+}
+section h2 {
+    text-decoration: underline;
+    text-underline-offset: 8px; /* espace entre le texte et le trait */
+    text-decoration-thickness: 3px; /* épaisseur du trait */
+}
